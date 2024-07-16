@@ -1,0 +1,4 @@
+fields @timestamp, @message, @logStream, @log
+| sort @timestamp desc
+| filter @message like 'calling salesforce API to update object'
+| limit 10000
